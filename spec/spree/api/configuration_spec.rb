@@ -17,6 +17,17 @@ module Spree
         expect(config.api_token).to eq("1234")
         expect(config.api_url).to eq("api.example.com")
       end
+
+      describe "#connection" do
+        before do
+          config.api_token = "1234"
+          config.api_url = "api.example.com"
+        end
+
+        it "spawns a faraday connection instance" do
+          expect(config.connection).to be_a(Faraday::Connection)
+        end
+      end
     end
   end
 end

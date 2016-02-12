@@ -3,14 +3,6 @@ require "spec_helper"
 module Spree
   module API
     RSpec.describe Variants do
-      before do
-        Spree::API.configure do |conf|
-          conf.api_token = "d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6"
-          conf.api_url = "http://localhost:3000"
-          conf.api_path = "/shop/api"
-        end
-      end
-
       let(:client) { Variants.new }
       let(:payload) do
         {

@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://localhost:3000/shop/api/taxonomies/5
+    body:
+      encoding: UTF-8
+      string: '{"taxonomy":{"name":"Updated Bruh"}}'
+    headers:
+      X-Spree-Token:
+      - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f437ff5eed996cb1dec3791e31fd0b9f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 05b2c89b-dbab-4946-b402-fcd2751cbf8c
+      X-Runtime:
+      - '0.378237'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":5,"name":"Updated Bruh","root":{"id":13,"name":"Updated Bruh","pretty_name":"Updated
+        Bruh","permalink":"bruh","parent_id":null,"taxonomy_id":5,"taxons":[]}}'
+    http_version: 
+  recorded_at: Thu, 11 Feb 2016 22:31:14 GMT
+recorded_with: VCR 3.0.1

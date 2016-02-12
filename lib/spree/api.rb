@@ -3,6 +3,7 @@ require "spree/api/configuration"
 require "spree/api/products"
 require "spree/api/variants"
 require "spree/api/taxonomies"
+require "spree/api/taxons"
 
 require "faraday"
 

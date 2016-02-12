@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/shop/api/products/7/variants
+    body:
+      encoding: UTF-8
+      string: '{"variant":{"price":12.0,"sku":"1234"}}'
+    headers:
+      X-Spree-Token:
+      - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a2f59d52f7311e0b7d487daf851fa6ab"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1e600a51-5c82-4299-b707-8fa4bddd06cc
+      X-Runtime:
+      - '0.552469'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":24,"name":"Apache Baseball Jersey","sku":"1234","price":"12.0","weight":"0.0","height":null,"width":null,"depth":null,"is_master":false,"slug":"apache-baseball-jersey","description":"Quaerat
+        quis minima quo doloribus debitis. Eius rem perferendis doloribus qui cupiditate
+        sunt cum. Ut esse consectetur ut provident optio nostrum et temporibus.","track_inventory":true,"cost_price":null,"option_values":[],"images":[],"display_price":"$12.00","options_text":"","in_stock":false,"is_backorderable":false,"total_on_hand":0,"is_destroyed":false,"variant_properties":[],"stock_items":[{"id":24,"count_on_hand":0,"stock_location_id":1,"backorderable":false,"available":false,"stock_location_name":"default"}]}'
+    http_version: 
+  recorded_at: Thu, 11 Feb 2016 17:50:57 GMT
+recorded_with: VCR 3.0.1

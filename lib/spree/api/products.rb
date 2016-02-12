@@ -1,45 +1,43 @@
-require "faraday"
+require "spree/api/helpers/client_helper"
 
 module Spree
   module API
     class Products
+      include Spree::API::Helpers::ClientHelper
+
       def index
-        config.connection.get("/shop/api/products")
+        config.connection.get(api_path + products_path)
       end
 
       def product_attributes
-        @_attributes ||= config.connection.get("/shop/api/products/new")
+        @_attributes ||= config.connection.get(api_path + products_path + "/new")
       end
 
       def create(product:)
-        config.connection.post("/shop/api/products") do |req|
-          req.headers["Content-Type"] = "application/json"
+        config.connection.post(api_path + products_path) do |req|
           req.body = product.to_json
         end
       end
 
       def show(id:)
-        config.connection.get(api_path + "/products/#{id}")
+        config.connection.get(api_path + products_path(id))
       end
 
       def update(id:, product:)
-        config.connection.put(api_path + "/products/#{id}") do |req|
-          req.headers["Content-Type"] = "application/json"
+        config.connection.put(api_path + products_path(id)) do |req|
           req.body = product.to_json
         end
       end
 
       def delete(id:)
-        config.connection.delete(api_path + "/products/#{id}")
+        config.connection.delete(api_path + products_path(id))
       end
 
       private
-        def config
-          @_config ||= Spree::API.configuration
-        end
-
-        def api_path
-          "/shop/api/"
+        def products_path(id = nil)
+          path = "/products"
+          path << "/#{id}" if id
+          path
         end
     end
   end

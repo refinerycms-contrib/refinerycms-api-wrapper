@@ -1,6 +1,9 @@
 require "spree/api/version"
 require "spree/api/configuration"
 require "spree/api/products"
+require "spree/api/variants"
+
+require "faraday"
 
 module Spree
   module API

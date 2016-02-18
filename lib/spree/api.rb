@@ -4,6 +4,7 @@ require "spree/api/products"
 require "spree/api/variants"
 require "spree/api/taxonomies"
 require "spree/api/taxons"
+require "spree/api/option_types"
 
 require "faraday"
 

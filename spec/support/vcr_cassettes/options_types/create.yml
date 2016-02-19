@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/shop/api/option_types
+    body:
+      encoding: UTF-8
+      string: '{"option_type":{"name":"coolness","presentation":"Level"}}'
+    headers:
+      X-Spree-Token:
+      - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"60ad1999a2a7256ca257461550a11ec2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ef95341c-96ce-42bd-af70-544f15340747
+      X-Runtime:
+      - '0.488131'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":3,"name":"coolness","presentation":"Level","position":3,"option_values":[]}'
+    http_version: 
+  recorded_at: Thu, 18 Feb 2016 22:46:07 GMT
+recorded_with: VCR 3.0.1

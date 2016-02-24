@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://localhost:3000/shop/api/taxonomies/5/taxons/16
+    body:
+      encoding: UTF-8
+      string: '{"taxon":{"name":"Bumblebee"}}'
+    headers:
+      X-Spree-Token:
+      - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"291f8b91929483967bb4e561e5ce7fc9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 177428a8-4820-48c4-a847-bf477dba60dc
+      X-Runtime:
+      - '0.398379'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":16,"name":"Bumblebee","pretty_name":"Updated Bruh -\u003e Bumblebee","permalink":"bruh/megatron","parent_id":13,"taxonomy_id":5,"taxons":[]}'
+    http_version: 
+  recorded_at: Wed, 24 Feb 2016 18:50:45 GMT
+recorded_with: VCR 3.0.1

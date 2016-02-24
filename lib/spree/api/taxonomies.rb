@@ -29,9 +29,35 @@ module Spree
         config.connection.delete(taxonomies_path(id))
       end
 
+      def taxon_create(taxonomy_id:, taxon:)
+        config.connection.post(taxons_path(taxonomy_id)) do |req|
+          req.body = taxon.to_json
+        end
+      end
+
+      def taxon_list(taxonomy_id:)
+        config.connection.get(taxons_path(taxonomy_id))
+      end
+
+      def taxon_update(taxonomy_id:, taxon_id:, taxon:)
+        config.connection.put(taxons_path(taxonomy_id, taxon_id)) do |req|
+          req.body = taxon.to_json
+        end
+      end
+
+      def taxon_destroy(taxonomy_id:, taxon_id:)
+        config.connection.delete(taxons_path(taxonomy_id, taxon_id))
+      end
+
       private
         def taxonomies_path(id = nil)
           path = api_path + "/taxonomies"
+          path << "/#{id}" if id
+          path
+        end
+
+        def taxons_path(taxonomy_id, id = nil)
+          path = api_path + "/taxonomies/#{taxonomy_id}/taxons"
           path << "/#{id}" if id
           path
         end

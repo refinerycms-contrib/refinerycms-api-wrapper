@@ -73,6 +73,61 @@ module Spree
           end
         end
       end
+
+      describe "#taxon_create" do
+        it "creates a taxon for the given taxonomy" do
+          VCR.use_cassette("taxonomies/taxons/create") do
+            response = client.taxon_create(taxonomy_id: 5, taxon: {
+              taxon: { name: "Optimus" }
+            })
+
+            expect(response.status).to eq(201)
+            expect(json(response)["name"]).to eq("Optimus")
+          end
+        end
+
+        it "returns errors when taxon is not valid" do
+          VCR.use_cassette("taxonomies/taxons/create/invalid") do
+            response = client.taxon_create(taxonomy_id: 5, taxon: {
+              taxon: { name: "" }
+            })
+
+            expect(response.status).to eq(422)
+            expect(json(response)["errors"]["name"]).to eq(["can't be blank"])
+          end
+        end
+      end
+
+      describe "#taxon_list" do
+        it "fetches a taxon list for a given taxonomy" do
+          VCR.use_cassette("taxonomies/taxons/index") do
+            response = client.taxon_list(taxonomy_id: 5)
+            expect(response.status).to eq(200)
+            expect(json(response)["taxons"].first["name"]).to eq("Megatron")
+          end
+        end
+      end
+
+      describe "#taxon_update" do
+        it "updates the name of a given taxon" do
+          VCR.use_cassette("taxonomies/taxons/update") do
+            response = client.taxon_update(taxonomy_id: 5, taxon_id: 16,
+              taxon: { taxon: { name: "Bumblebee" } })
+
+            expect(response.status).to eq(200)
+            expect(json(response)["name"]).to eq("Bumblebee")
+          end
+        end
+      end
+
+      describe "#taxon_destroy" do
+        it "deletes the given taxon" do
+          VCR.use_cassette("taxonomies/taxons/destroy") do
+            response = client.taxon_destroy(taxonomy_id: 5, taxon_id: 18)
+            expect(response.status).to eq(204)
+          end
+        end
+      end
     end
   end
 end

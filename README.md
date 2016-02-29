@@ -1,3 +1,5 @@
+https://codeship.com/projects/49f0af80-c09a-0133-681a-7ec3d9f82d5d/status?branch=master
+
 # Spree::Api
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/spree/api`. To experiment with that code, run `bin/console` for an interactive prompt.

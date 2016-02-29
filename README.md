@@ -1,4 +1,4 @@
-https://codeship.com/projects/49f0af80-c09a-0133-681a-7ec3d9f82d5d/status?branch=master
+[ ![Codeship Status for rocketsofawesome/spree-api](https://codeship.com/projects/49f0af80-c09a-0133-681a-7ec3d9f82d5d/status?branch=master)](https://codeship.com/projects/137289)
 
 # Spree::Api
 

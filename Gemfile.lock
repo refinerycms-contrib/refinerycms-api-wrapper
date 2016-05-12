@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    refinery-api (0.1.0)
+    refinerycms-api-wrapper (0.1.0)
       faraday
 
 GEM
@@ -50,10 +50,10 @@ DEPENDENCIES
   bundler (~> 1.11)
   pry
   rake (~> 10.0)
+  refinerycms-api-wrapper!
   rspec (~> 3.0)
-  refinery-api!
   vcr
   webmock
 
 BUNDLED WITH
-   1.11.2
+   1.12.3

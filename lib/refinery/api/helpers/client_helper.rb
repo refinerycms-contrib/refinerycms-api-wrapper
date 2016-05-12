@@ -1,13 +1,13 @@
-module Spree
+module Refinery
   module API
     module Helpers
       module ClientHelper
         def config
-          @_config ||= Spree::API.configuration
+          @_config ||= Refinery::API.configuration
         end
 
         def api_path
-          Spree::API.configuration.api_path
+          Refinery::API.configuration.api_path
         end
       end
     end

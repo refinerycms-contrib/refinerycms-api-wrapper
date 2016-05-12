@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"taxonomy":{"name":"Bruh"}}'
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       Content-Type:
       - application/json
@@ -43,6 +43,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":5,"name":"Bruh","root":{"id":13,"name":"Bruh","pretty_name":"Bruh","permalink":"bruh","parent_id":null,"taxonomy_id":5,"taxons":[]}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 11 Feb 2016 22:27:16 GMT
 recorded_with: VCR 3.0.1

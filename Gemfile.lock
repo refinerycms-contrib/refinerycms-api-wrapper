@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    spree-api (0.1.0)
+    refinery-api (0.1.0)
       faraday
 
 GEM
@@ -51,7 +51,7 @@ DEPENDENCIES
   pry
   rake (~> 10.0)
   rspec (~> 3.0)
-  spree-api!
+  refinery-api!
   vcr
   webmock
 

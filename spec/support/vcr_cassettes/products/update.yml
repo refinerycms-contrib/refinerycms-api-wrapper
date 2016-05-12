@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"product":{"name":"Cool updated"}}'
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       User-Agent:
       - Faraday v0.9.2
@@ -44,6 +44,6 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":10,"name":"Cool updated","description":null,"price":"100.0","display_price":"$100.00","available_on":"2016-02-10T19:07:08.701Z","slug":"cool-name","meta_description":null,"meta_keywords":null,"shipping_category_id":1,"taxon_ids":[],"total_on_hand":0,"master":{"id":20,"name":"Cool
         updated","sku":"","price":"100.0","weight":"0.0","height":null,"width":null,"depth":null,"is_master":true,"slug":"cool-name","description":null,"track_inventory":true,"cost_price":null,"option_values":[],"images":[],"display_price":"$100.00","options_text":"","in_stock":false,"is_backorderable":false,"total_on_hand":0,"is_destroyed":false},"variants":[],"option_types":[],"product_properties":[],"classifications":[],"has_variants":false}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 10 Feb 2016 21:04:48 GMT
 recorded_with: VCR 3.0.1

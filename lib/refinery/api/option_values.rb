@@ -1,7 +1,7 @@
-module Spree
+module Refinery
   module API
     class OptionValues
-      include Spree::API::Helpers::ClientHelper
+      include Refinery::API::Helpers::ClientHelper
 
       def create(option_type_id:, option_value:)
         config.connection.post(

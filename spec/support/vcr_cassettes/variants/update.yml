@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"variant":{"sku":"4321"}}'
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       User-Agent:
       - Faraday v0.9.2
@@ -45,6 +45,6 @@ http_interactions:
       string: '{"id":22,"name":"Apache Baseball Jersey","sku":"4321","price":"19.99","weight":"0.0","height":"1.0","width":"2.0","depth":"3.0","is_master":false,"slug":"apache-baseball-jersey","description":"Quaerat
         quis minima quo doloribus debitis. Eius rem perferendis doloribus qui cupiditate
         sunt cum. Ut esse consectetur ut provident optio nostrum et temporibus.","track_inventory":true,"cost_price":"17.0","option_values":[],"images":[],"display_price":"$19.99","options_text":"","in_stock":false,"is_backorderable":false,"total_on_hand":0,"is_destroyed":false,"variant_properties":[],"stock_items":[{"id":22,"count_on_hand":0,"stock_location_id":1,"backorderable":false,"available":false,"stock_location_name":"default"}]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 11 Feb 2016 17:50:57 GMT
 recorded_with: VCR 3.0.1

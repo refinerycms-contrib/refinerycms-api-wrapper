@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"option_type":{"name":"coolness","presentation":"Level"}}'
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       Content-Type:
       - application/json
@@ -43,6 +43,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":3,"name":"coolness","presentation":"Level","position":3,"option_values":[]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 18 Feb 2016 22:46:07 GMT
 recorded_with: VCR 3.0.1

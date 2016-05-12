@@ -1,9 +1,9 @@
-require "spree/api/helpers/client_helper"
+require "refinery/api/helpers/client_helper"
 
-module Spree
+module Refinery
   module API
     class Variants
-      include Spree::API::Helpers::ClientHelper
+      include Refinery::API::Helpers::ClientHelper
 
       def index(product_id: nil)
         if product_id

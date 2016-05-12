@@ -7,7 +7,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       Content-Type:
       - application/json
@@ -44,6 +44,6 @@ http_interactions:
       encoding: UTF-8
       string: '[{"id":1,"name":"tshirt-size","presentation":"Size","position":1,"option_values":[{"id":1,"name":"Small","presentation":"S","option_type_name":"tshirt-size","option_type_id":1,"option_type_presentation":"Size"},{"id":2,"name":"Medium","presentation":"M","option_type_name":"tshirt-size","option_type_id":1,"option_type_presentation":"Size"},{"id":3,"name":"Large","presentation":"L","option_type_name":"tshirt-size","option_type_id":1,"option_type_presentation":"Size"},{"id":4,"name":"Extra
         Large","presentation":"XL","option_type_name":"tshirt-size","option_type_id":1,"option_type_presentation":"Size"}]},{"id":2,"name":"tshirt-color","presentation":"Color","position":2,"option_values":[{"id":5,"name":"Red","presentation":"Red","option_type_name":"tshirt-color","option_type_id":2,"option_type_presentation":"Color"},{"id":6,"name":"Green","presentation":"Green","option_type_name":"tshirt-color","option_type_id":2,"option_type_presentation":"Color"},{"id":7,"name":"Blue","presentation":"Blue","option_type_name":"tshirt-color","option_type_id":2,"option_type_presentation":"Color"}]}]'
-    http_version: 
+    http_version:
   recorded_at: Thu, 18 Feb 2016 21:33:06 GMT
 recorded_with: VCR 3.0.1

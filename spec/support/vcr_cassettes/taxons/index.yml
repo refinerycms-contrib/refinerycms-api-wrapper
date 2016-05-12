@@ -7,7 +7,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       Content-Type:
       - application/json
@@ -45,6 +45,6 @@ http_interactions:
       string: '{"taxons":[{"id":8,"name":"Ruby","pretty_name":"Brand -\u003e Ruby","permalink":"brand/ruby","parent_id":2,"taxonomy_id":2,"taxons":[]},{"id":9,"name":"Apache","pretty_name":"Brand
         -\u003e Apache","permalink":"brand/apache","parent_id":2,"taxonomy_id":2,"taxons":[]},{"id":10,"name":"Rails","pretty_name":"Brand
         -\u003e Rails","permalink":"brand/rails","parent_id":2,"taxonomy_id":2,"taxons":[]}],"count":3,"total_count":3,"current_page":1,"per_page":25,"pages":1}'
-    http_version: 
+    http_version:
   recorded_at: Fri, 12 Feb 2016 17:51:25 GMT
 recorded_with: VCR 3.0.1

@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"option_value":{"name":"tiny"}}'
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       Content-Type:
       - application/json
@@ -43,6 +43,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":2,"name":"tiny","presentation":"M","option_type_name":"tshirt-size","option_type_id":1,"option_type_presentation":"Size"}'
-    http_version: 
+    http_version:
   recorded_at: Fri, 19 Feb 2016 17:42:18 GMT
 recorded_with: VCR 3.0.1

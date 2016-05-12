@@ -7,7 +7,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       Content-Type:
       - application/json
@@ -50,6 +50,6 @@ http_interactions:
         -\u003e Apache","permalink":"brand/apache","parent_id":2,"taxonomy_id":2},{"id":10,"name":"Rails","pretty_name":"Brand
         -\u003e Rails","permalink":"brand/rails","parent_id":2,"taxonomy_id":2}]}},{"id":3,"name":"Some
         name","root":{"id":11,"name":"Some name","pretty_name":"Some name","permalink":"some-name","parent_id":null,"taxonomy_id":3,"taxons":[]}},{"id":4,"name":"Super","root":{"id":12,"name":"Super","pretty_name":"Super","permalink":"super","parent_id":null,"taxonomy_id":4,"taxons":[]}}],"count":4,"current_page":1,"pages":1}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 11 Feb 2016 22:04:37 GMT
 recorded_with: VCR 3.0.1

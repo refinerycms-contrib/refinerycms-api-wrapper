@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"taxon":{"name":""}}'
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       Content-Type:
       - application/json
@@ -42,6 +42,6 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"Invalid resource. Please fix errors and try again.","errors":{"name":["can''t
         be blank"]}}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 24 Feb 2016 18:41:19 GMT
 recorded_with: VCR 3.0.1

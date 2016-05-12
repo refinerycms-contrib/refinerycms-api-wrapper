@@ -7,7 +7,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      X-Spree-Token:
+      X-Refinery-Token:
       - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
       Content-Type:
       - application/json
@@ -44,6 +44,6 @@ http_interactions:
       encoding: UTF-8
       string: '{"taxons":[{"id":16,"name":"Megatron","pretty_name":"Updated Bruh -\u003e
         Megatron","permalink":"bruh/megatron","parent_id":13,"taxonomy_id":5,"taxons":[]}],"count":1,"total_count":1,"current_page":1,"per_page":25,"pages":1}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 24 Feb 2016 18:46:30 GMT
 recorded_with: VCR 3.0.1

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-module Spree
+module Refinery
   module API
     RSpec.describe Configuration do
       let(:config) { described_class.new }

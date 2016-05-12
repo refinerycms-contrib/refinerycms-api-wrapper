@@ -1,6 +1,6 @@
 require "spec_helper"
 
-module Spree
+module Refinery
   module API
     RSpec.describe OptionTypes do
       let(:client) { OptionTypes.new }

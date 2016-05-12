@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'spree/api/version'
+require 'refinery/api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "spree-api"
-  spec.version       = Spree::API::VERSION
+  spec.name          = "refinerycms-api-wrapper"
+  spec.version       = Refinery::API::VERSION
   spec.authors       = ["Ian Rodriguez"]
   spec.email         = ["benjamin.rodriguez@clevertech.biz"]
 
-  spec.summary       = %q{This wraps the Spree commerce API in a simple yet flexible way.}
-  spec.description   = %q{Interact with Spree commerce API using this awesome gem.}
+  spec.summary       = %q{This wraps the Refinery commerce API in a simple yet flexible way.}
+  spec.description   = %q{Interact with Refinery commerce API using this awesome gem.}
   # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 

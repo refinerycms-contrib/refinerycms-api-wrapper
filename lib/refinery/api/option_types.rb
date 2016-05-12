@@ -1,7 +1,7 @@
-module Spree
+module Refinery
   module API
     class OptionTypes
-      include Spree::API::Helpers::ClientHelper
+      include Refinery::API::Helpers::ClientHelper
 
       def index
         config.connection.get(option_types_path)

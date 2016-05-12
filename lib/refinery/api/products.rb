@@ -1,9 +1,9 @@
-require "spree/api/helpers/client_helper"
+require "refinery/api/helpers/client_helper"
 
-module Spree
+module Refinery
   module API
     class Products
-      include Spree::API::Helpers::ClientHelper
+      include Refinery::API::Helpers::ClientHelper
 
       def index
         config.connection.get(products_path)

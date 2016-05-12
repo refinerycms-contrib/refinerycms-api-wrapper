@@ -1,5 +1,6 @@
 require "refinery/api/version"
 require "refinery/api/configuration"
+require "refinery/api/pages"
 require "refinery/api/products"
 require "refinery/api/variants"
 require "refinery/api/taxonomies"

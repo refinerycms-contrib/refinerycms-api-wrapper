@@ -6,12 +6,10 @@ require 'refinery/api/version'
 Gem::Specification.new do |spec|
   spec.name          = "refinerycms-api-wrapper"
   spec.version       = Refinery::API::VERSION
-  spec.authors       = ["Ian Rodriguez"]
-  spec.email         = ["benjamin.rodriguez@clevertech.biz"]
+  spec.authors       = ["Brice Sanchez", "Ian Rodriguez"]
 
-  spec.summary       = %q{This wraps the Refinery commerce API in a simple yet flexible way.}
-  spec.description   = %q{Interact with Refinery commerce API using this awesome gem.}
-  # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This wraps the Refinery CMS API in a simple yet flexible way.}
+  spec.description   = %q{Interact with Refinery CMS API using this awesome gem.}
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

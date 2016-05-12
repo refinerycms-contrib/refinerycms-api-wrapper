@@ -1,6 +1,6 @@
-[ ![Codeship Status for rocketsofawesome/refinery-api](https://codeship.com/projects/49f0af80-c09a-0133-681a-7ec3d9f82d5d/status?branch=master)](https://codeship.com/projects/137289)
+# Refinery CMS API Wrapper
 
-# Refinery::Api
+[![Build Status](https://travis-ci.org/refinerycms-contrib/refinerycms-api-wrapper.svg?branch=master)](https://travis-ci.org/refinerycms-contrib/refinerycms-api-wrapper)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/refinery/api`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -11,7 +11,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'refinery-api'
+gem 'refinerycms-api-wrapper'
 ```
 
 And then execute:
@@ -20,7 +20,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install refinery-api
+    $ gem install refinerycms-api-wrapper
 
 ## Usage
 
@@ -34,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/refinery-api.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/refinerycms-api-wrapper.
 
 
 ## License

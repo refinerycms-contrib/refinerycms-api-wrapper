@@ -13,6 +13,9 @@ end
 RSpec.configure do |config|
   config.include Requests::JsonHelper
 
+  config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
+
   config.before(:each) do
     Refinery::API.configure do |conf|
       conf.api_token = "123"

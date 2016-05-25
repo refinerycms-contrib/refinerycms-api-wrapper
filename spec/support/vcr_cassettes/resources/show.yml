@@ -1,14 +1,14 @@
 ---
 http_interactions:
 - request:
-    method: put
-    uri: http://localhost:3000/shop/api/option_types/3
+    method: get
+    uri: http://localhost:3000/api/v1/resources/1
     body:
-      encoding: UTF-8
-      string: '{"option_type":{"name":"coolness updated"}}'
+      encoding: US-ASCII
+      string: ''
     headers:
       X-Refinery-Token:
-      - d3d1038e9338436c2db1e9ca597ef31b430e937aef90fba6
+      - '123'
       Content-Type:
       - application/json
       User-Agent:
@@ -20,7 +20,7 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -31,18 +31,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"161ce7a7492809a0071d4c0303aed897"
+      - W/"7c7727cf697291809ae087ca7bec8744"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9053c8f3-2f43-4e9d-a404-bfd74940274f
+      - 9e493217-7546-4b10-98fa-3531c3a3a9cd
       X-Runtime:
-      - '0.370091'
-      Transfer-Encoding:
-      - chunked
+      - '0.160768'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.1/2015-02-26)
+      Date:
+      - Wed, 25 May 2016 20:03:09 GMT
+      Content-Length:
+      - '147'
+      Connection:
+      - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"id":3,"name":"coolness updated","presentation":"Level","position":3,"option_values":[]}'
-    http_version:
-  recorded_at: Thu, 18 Feb 2016 22:53:03 GMT
+      string: '{"resource_title":"","file":"/system/resources/W1siZiIsIjIwMTYvMDUvMjUvN2ZncnhrNm5rbl9lbnRyZXByaXNlLmpwZyJdXQ/entreprise.jpg?sha=96a2841d14e67be1"}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 20:03:09 GMT
 recorded_with: VCR 3.0.1

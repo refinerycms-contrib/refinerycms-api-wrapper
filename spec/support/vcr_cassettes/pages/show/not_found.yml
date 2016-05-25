@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/pages/1
+    uri: http://localhost:3000/api/v1/pages/1000
     body:
       encoding: US-ASCII
       string: ''
@@ -19,8 +19,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: 'OK '
+      code: 404
+      message: 'Not Found '
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -30,26 +30,23 @@ http_interactions:
       - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"01913db94153b2f6f0f7b703df770f47"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 3862f7f6-0849-4912-aa86-95270e15881d
+      - ace486c5-22aa-4754-9855-1ad7df85c674
       X-Runtime:
-      - '0.212043'
+      - '0.194204'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.1/2015-02-26)
       Date:
-      - Wed, 25 May 2016 18:36:18 GMT
+      - Wed, 25 May 2016 18:41:57 GMT
       Content-Length:
-      - '389'
+      - '65'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"browser_title":"","draft":false,"link_url":"","menu_title":"","meta_description":"","parent_id":null,"skip_to_first_child":false,"show_in_menu":true,"title":"test","view_template":"show","layout_template":null,"custom_slug":null,"page_parts":[{"title":"Body","slug":"body","body":"\u003cp\u003etoto
-        plop\u003cbr/\u003e\u003c/p\u003e"},{"title":"Side Body","slug":"side_body","body":""}]}'
+      string: '{"error":"The resource you were looking for could not be found."}'
     http_version: 
-  recorded_at: Wed, 25 May 2016 18:36:18 GMT
+  recorded_at: Wed, 25 May 2016 18:41:57 GMT
 recorded_with: VCR 3.0.1

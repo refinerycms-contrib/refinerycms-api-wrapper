@@ -13,6 +13,22 @@ module Refinery
         config.connection.get(pages_path(id))
       end
 
+      def create(page:)
+        config.connection.post(pages_path) do |req|
+          req.body = page.to_json
+        end
+      end
+
+      def update(id:, page:)
+        config.connection.put(pages_path(id)) do |req|
+          req.body = page.to_json
+        end
+      end
+
+      def destroy(id:)
+        config.connection.delete(pages_path(id))
+      end
+
       private
         def pages_path(id = nil)
           path = api_path + "/pages"

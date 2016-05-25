@@ -20,7 +20,7 @@ RSpec.configure do |config|
     Refinery::API.configure do |conf|
       conf.api_token = "123"
       conf.api_url = "http://localhost:3000"
-      conf.api_path = "/shop/api/v1"
+      conf.api_path = "/api/v1"
     end
   end
 end

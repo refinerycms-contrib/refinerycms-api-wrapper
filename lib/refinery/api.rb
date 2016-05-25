@@ -1,6 +1,7 @@
 require "refinery/api/version"
 require "refinery/api/configuration"
 require "refinery/api/pages"
+require "refinery/api/resources"
 
 require "faraday"
 

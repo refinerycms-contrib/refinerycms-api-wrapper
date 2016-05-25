@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/resources/1
+    uri: http://localhost:3000/api/v1/images/1
     body:
       encoding: US-ASCII
       string: ''
@@ -31,24 +31,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7c7727cf697291809ae087ca7bec8744"
+      - W/"91372d1395e88f5f1a8fa7f1a1b31df4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fa81f65a-57b6-4066-8aaa-90a9fdcc3f8e
+      - 1fddc49d-5512-46ca-b243-c5363e090903
       X-Runtime:
-      - '0.258893'
+      - '0.160003'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.1/2015-02-26)
       Date:
-      - Wed, 25 May 2016 20:24:07 GMT
+      - Wed, 25 May 2016 20:23:05 GMT
       Content-Length:
-      - '147'
+      - '187'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"resource_title":"","file":"/system/resources/W1siZiIsIjIwMTYvMDUvMjUvN2ZncnhrNm5rbl9lbnRyZXByaXNlLmpwZyJdXQ/entreprise.jpg?sha=96a2841d14e67be1"}'
+      string: '{"image_size":657875,"image_title":"entreprise","image_alt":"","image":"/system/images/W1siZiIsIjIwMTYvMDUvMjUvN2txbXk5MmtpYl9lbnRyZXByaXNlLmpwZyJdXQ/entreprise.jpg?sha=728d3c6ff3b61a7f"}'
     http_version: 
-  recorded_at: Wed, 25 May 2016 20:24:07 GMT
+  recorded_at: Wed, 25 May 2016 20:23:05 GMT
 recorded_with: VCR 3.0.1

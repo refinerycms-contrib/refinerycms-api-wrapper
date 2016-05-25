@@ -58,7 +58,7 @@ module Refinery
 
       describe "#show" do
         it "retrieves a given image's attributes" do
-          VCR.use_cassette("resources/show") do
+          VCR.use_cassette("images/show") do
             response = client.show(id: 1)
             expect(response.status).to eq(200)
             expect(JSON.parse(response.body)["image_title"]).to eq("entreprise")

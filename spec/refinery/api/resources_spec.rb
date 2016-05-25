@@ -56,7 +56,7 @@ module Refinery
       #   end
       # end
 
-      describe "#show", focus: true do
+      describe "#show" do
         it "retrieves a given resource's attributes" do
           VCR.use_cassette("resources/show") do
             response = client.show(id: 1)

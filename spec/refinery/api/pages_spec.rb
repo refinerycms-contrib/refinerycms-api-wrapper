@@ -37,8 +37,7 @@ module Refinery
       describe "#create" do
         it "creates a new page" do
           VCR.use_cassette("pages/create") do
-            response = client.create(
-            { page: { title: "The coolest page evar!" } })
+            response = client.create(page: { page: { title: "The coolest page evar!" } })
 
             expect(response.status).to eq(201)
             expect(json(response)["title"]).to eq("The coolest page evar!")
@@ -50,7 +49,8 @@ module Refinery
         it "updates attributes on a page" do
           VCR.use_cassette("pages/update") do
             response = client.update(id: 2,
-              page: { title: "updated coolest page evar!" })
+              page: { page: { title: "updated coolest page evar!" } }
+            )
 
             expect(response.status).to eq(200)
             expect(json(response)["title"]).to eq("updated coolest page evar!")

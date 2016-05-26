@@ -23,7 +23,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure a connection to the API:
+
+```ruby
+Refinery::API.configure do |conf|
+  conf.api_token = "123"
+  conf.api_url = "http://localhost:3000"
+  conf.api_path = "/api/v1"
+end
+```
+
+Make your first call:
+
+```ruby
+client = Refinery::API::Pages.new
+pages = client.index.body
+```
 
 ## Development
 

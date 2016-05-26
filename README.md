@@ -2,9 +2,8 @@
 
 [![Build Status](https://travis-ci.org/refinerycms-contrib/refinerycms-api-wrapper.svg?branch=master)](https://travis-ci.org/refinerycms-contrib/refinerycms-api-wrapper)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/refinery/api`. To experiment with that code, run `bin/console` for an interactive prompt.
+A Ruby library for working with the The Refinery CMS REST API.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 

@@ -23,15 +23,15 @@ module Refinery
         config.connection.get(images_path(id))
       end
 
-      # def update(id:, product:)
-      #   config.connection.put(products_path(id)) do |req|
-      #     req.body = product.to_json
-      #   end
-      # end
+      def update(id:, image:)
+        config.connection.put(images_path(id)) do |req|
+          req.body = image.to_json
+        end
+      end
 
-      # def delete(id:)
-      #   config.connection.delete(products_path(id))
-      # end
+      def delete(id:)
+        config.connection.delete(images_path(id))
+      end
 
       private
         def images_path(id = nil)

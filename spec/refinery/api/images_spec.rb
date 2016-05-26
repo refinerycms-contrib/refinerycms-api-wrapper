@@ -21,21 +21,6 @@ module Refinery
         end
       end
 
-      # describe "#product_attributes" do
-      #   it "fetches attributes needed to create a product" do
-      #     VCR.use_cassette("products/attributes") do
-      #       response = client.product_attributes
-
-      #       expect(response.status).to eq(200)
-      #       expect(JSON.parse(response.body)["attributes"])
-      #         .to(include("id", "name", "price"))
-
-      #       expect(JSON.parse(response.body)["required_attributes"])
-      #         .to(include("name", "price", "shipping_category_id"))
-      #     end
-      #   end
-      # end
-
       # describe "#create" do
       #   it "creates a product" do
       #     VCR.use_cassette("products/create") do
@@ -66,37 +51,26 @@ module Refinery
         end
       end
 
-      # describe "#update" do
-      #   it "updates attributes on the given product" do
-      #     VCR.use_cassette("products/update") do
-      #       response = client.update(id: 10,
-      #         product: { product: { name: "Cool updated" } })
+      describe "#update" do
+        it "updates attributes on the given image" do
+          VCR.use_cassette("images/update") do
+            response = client.update(id: 1,
+              image: { image: { image_title: "Cool updated" } })
 
-      #       expect(response.status).to eq(200)
-      #       expect(JSON.parse(response.body)["name"]).to eq("Cool updated")
-      #     end
-      #   end
+            expect(response.status).to eq(200)
+            expect(JSON.parse(response.body)["image_title"]).to eq("Cool updated")
+          end
+        end
+      end
 
-      #   it "returns errors if the payload is not valid" do
-      #     VCR.use_cassette("products/update/invalid") do
-      #       response = client.update(id: 9,
-      #         product: { product: { name: "" } })
-
-      #       expect(response.status).to eq(422)
-      #       expect(JSON.parse(response.body)["errors"]["name"])
-      #         .to(include("can't be blank"))
-      #     end
-      #   end
-      # end
-
-      # describe "#delete" do
-      #   it "deletes a given product" do
-      #     VCR.use_cassette("products/delete") do
-      #       response = client.delete(id: 10)
-      #       expect(response.status).to eq(204)
-      #     end
-      #   end
-      # end
+      describe "#delete" do
+        it "deletes a given image" do
+          VCR.use_cassette("images/delete") do
+            response = client.delete(id: 1)
+            expect(response.status).to eq(204)
+          end
+        end
+      end
     end
   end
 end

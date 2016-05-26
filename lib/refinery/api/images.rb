@@ -13,11 +13,11 @@ module Refinery
       #   @_attributes ||= config.connection.get(products_path + "/new")
       # end
 
-      # def create(resource:)
-      #   config.connection.post(resources_path) do |req|
-      #     req.body = resource.to_json
-      #   end
-      # end
+      def create(image:)
+        config.connection.post(images_path) do |req|
+          req.body = image.to_json
+        end
+      end
 
       def show(id:)
         config.connection.get(images_path(id))

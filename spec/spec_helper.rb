@@ -6,6 +6,7 @@ require 'dotenv'
 Dotenv.load
 
 require "support/request_helpers"
+require "support/fixture_helpers"
 
 ENV['REFINERYCMS_API_TOKEN'] ||= '123'
 ENV['REFINERYCMS_API_URL'] ||= 'http://localhost:3000'
@@ -22,6 +23,7 @@ end
 
 RSpec.configure do |config|
   config.include Requests::JsonHelper
+  config.include Fixtures::Helper
 
   config.filter_run focus: true
   config.run_all_when_everything_filtered = true

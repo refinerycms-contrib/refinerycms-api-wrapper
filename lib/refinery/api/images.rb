@@ -9,14 +9,14 @@ module Refinery
         config.connection.get(images_path)
       end
 
+      def show(id:)
+        config.connection.get(images_path(id))
+      end
+
       def create(image:)
         config.connection.post(images_path) do |req|
           req.body = image.to_json
         end
-      end
-
-      def show(id:)
-        config.connection.get(images_path(id))
       end
 
       def update(id:, image:)
@@ -25,8 +25,8 @@ module Refinery
         end
       end
 
-      def delete(id:)
-        config.connection.delete(images_path(id))
+      def destroy(id:)
+        config.connection.destroy(images_path(id))
       end
 
       private

@@ -9,14 +9,14 @@ module Refinery
         config.connection.get(resources_path)
       end
 
+      def show(id:)
+        config.connection.get(resources_path(id))
+      end
+
       def create(resource:)
         config.connection.post(resources_path) do |req|
           req.body = resource.to_json
         end
-      end
-
-      def show(id:)
-        config.connection.get(resources_path(id))
       end
 
       def update(id:, resource:)
@@ -26,7 +26,7 @@ module Refinery
       end
 
       def destroy(id:)
-        config.connection.delete(resources_path(id))
+        config.connection.destroy(resources_path(id))
       end
 
       private

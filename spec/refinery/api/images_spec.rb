@@ -4,13 +4,6 @@ module Refinery
   module API
     RSpec.describe Images do
       let(:client) { Images.new }
-      let(:image_cat) do
-        { "image" => {
-            "image" => [upload_file('thinking-cat.jpg')],
-            "image_title" => 'Cat'
-          }
-        }
-      end
 
       describe "#index" do
         it "fetches a list of images" do
@@ -22,27 +15,25 @@ module Refinery
         end
       end
 
-      # Still buggy, look at upload_file function into fixtures_helpers.rb
-      # describe "#create" do
-      #   it "creates a image" do
-      #     VCR.use_cassette("images/create") do
-      #       response = client.create(image: image_cat)
-      #       expect(response.status).to eq(201)
-      #       expect(JSON.parse(response.body)["image_title"]).to eq("Cat")
-      #     end
-      #   end
-      # end
+      describe "#create" do
+        it "creates a image" do
+          VCR.use_cassette("images/create") do
+            response = client.create(image: { image: [upload_file('thinking-cat.jpg')] })
+            expect(response.status).to eq(201)
+            expect(JSON.parse(response.body)["image_title"]).to eq("Cat")
+          end
+        end
 
-      #   it "returns errors when payload is invalid" do
-      #     VCR.use_cassette("products/create/invalid") do
-      #       response = client.create(product: payload["product"].update(name: ""))
-      #       expect(response.status).to eq(422)
+        # it "returns errors when payload is invalid" do
+        #   VCR.use_cassette("products/create/invalid") do
+        #     response = client.create(product: payload["product"].update(name: ""))
+        #     expect(response.status).to eq(422)
 
-      #       expect(JSON.parse(response.body)["errors"]["name"])
-      #         .to(include("can't be blank"))
-      #     end
-      #   end
-      # end
+        #     expect(JSON.parse(response.body)["errors"]["name"])
+        #       .to(include("can't be blank"))
+        #   end
+        # end
+      end
 
       describe "#show" do
         it "retrieves a given image's attributes" do

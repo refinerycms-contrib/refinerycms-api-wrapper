@@ -4,12 +4,6 @@ module Refinery
   module API
     RSpec.describe Resources do
       let(:client) { Resources.new }
-      let(:payload) do
-        { "product" => {
-            "name" => "Cool name", "price" => 100, "shipping_category_id" => 1
-          }
-        }
-      end
 
       describe "#index" do
         it "fetches a list of resources" do
@@ -21,25 +15,9 @@ module Refinery
         end
       end
 
-      # describe "#create" do
-      #   it "creates a product" do
-      #     VCR.use_cassette("products/create") do
-      #       response = client.create(product: payload)
-      #       expect(response.status).to eq(201)
-      #       expect(JSON.parse(response.body)["name"]).to eq("Cool name")
-      #     end
-      #   end
-
-      #   it "returns errors when payload is invalid" do
-      #     VCR.use_cassette("products/create/invalid") do
-      #       response = client.create(product: payload["product"].update(name: ""))
-      #       expect(response.status).to eq(422)
-
-      #       expect(JSON.parse(response.body)["errors"]["name"])
-      #         .to(include("can't be blank"))
-      #     end
-      #   end
-      # end
+      describe "#create" do
+        pending
+      end
 
       describe "#show" do
         it "retrieves a given resource's attributes" do
@@ -63,10 +41,10 @@ module Refinery
         end
       end
 
-      describe "#delete" do
-        it "deletes a given resource" do
-          VCR.use_cassette("resources/delete") do
-            response = client.delete(id: 1)
+      describe "#destroy" do
+        it "destroy a given resource" do
+          VCR.use_cassette("resources/destroy") do
+            response = client.destroy(id: 1)
             expect(response.status).to eq(204)
           end
         end

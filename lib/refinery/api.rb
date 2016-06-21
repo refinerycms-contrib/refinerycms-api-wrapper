@@ -3,6 +3,8 @@ require "refinery/api/configuration"
 require "refinery/api/pages"
 require "refinery/api/resources"
 require "refinery/api/images"
+require "refinery/api/blog/posts"
+require "refinery/api/inquiries/inquiries"
 
 require "faraday"
 

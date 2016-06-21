@@ -9,15 +9,11 @@ module Refinery
         config.connection.get(resources_path)
       end
 
-      # def product_attributes
-      #   @_attributes ||= config.connection.get(products_path + "/new")
-      # end
-
-      # def create(resource:)
-      #   config.connection.post(resources_path) do |req|
-      #     req.body = resource.to_json
-      #   end
-      # end
+      def create(resource:)
+        config.connection.post(resources_path) do |req|
+          req.body = resource.to_json
+        end
+      end
 
       def show(id:)
         config.connection.get(resources_path(id))
@@ -29,7 +25,7 @@ module Refinery
         end
       end
 
-      def delete(id:)
+      def destroy(id:)
         config.connection.delete(resources_path(id))
       end
 

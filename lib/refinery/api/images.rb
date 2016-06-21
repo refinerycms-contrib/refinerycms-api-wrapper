@@ -9,10 +9,6 @@ module Refinery
         config.connection.get(images_path)
       end
 
-      # def product_attributes
-      #   @_attributes ||= config.connection.get(products_path + "/new")
-      # end
-
       def create(image:)
         config.connection.post(images_path) do |req|
           req.body = image.to_json

@@ -6,6 +6,24 @@ module Refinery
       RSpec.describe Posts do
         let(:client) { Posts.new }
 
+        describe "#create" do
+          it "creates a new post" do
+            VCR.use_cassette("blog/posts/create") do
+              response = client.create(post: { 
+                post: { 
+                  title: "The coolest post evar!",
+                  body: "The coolest body evar!",
+                  published_at: Date.today,
+                  username: "Bob"
+                } 
+              })
+
+              expect(response.status).to eq(201)
+              expect(json(response)["title"]).to eq("The coolest post evar!")
+            end
+          end
+        end
+
         describe "#index" do
           it "fetches a list of blog posts" do
             VCR.use_cassette("blog/posts/index") do
@@ -21,7 +39,7 @@ module Refinery
             VCR.use_cassette("blog/posts/show") do
               response = client.show(id: 1)
               expect(response.status).to eq(200)
-              expect(json(response)["title"]).to eq("test")
+              expect(json(response)["title"]).to eq("The coolest post evar!")
             end
           end
 
@@ -35,21 +53,21 @@ module Refinery
           end
         end
 
-        describe "#create" do
-          it "creates a new post" do
-            VCR.use_cassette("blog/posts/create") do
-              response = client.create(post: { post: { title: "The coolest post evar!" } })
+        # describe "#create" do
+        #   it "creates a new post" do
+        #     VCR.use_cassette("blog/posts/create") do
+        #       response = client.create(post: { post: { title: "The coolest post evar!" } })
 
-              expect(response.status).to eq(201)
-              expect(json(response)["title"]).to eq("The coolest post evar!")
-            end
-          end
-        end
+        #       expect(response.status).to eq(201)
+        #       expect(json(response)["title"]).to eq("The coolest post evar!")
+        #     end
+        #   end
+        # end
 
         describe "#update" do
           it "updates attributes on a post" do
             VCR.use_cassette("blog/posts/update") do
-              response = client.update(id: 2,
+              response = client.update(id: 1,
                 post: { post: { title: "updated coolest post evar!" } }
               )
 
@@ -62,7 +80,7 @@ module Refinery
         describe "#destroy" do
           it "updates attributes on a post" do
             VCR.use_cassette("blog/posts/destroy") do
-              response = client.destroy(id: 2)
+              response = client.destroy(id: 1)
               expect(response.status).to eq(204)
             end
           end

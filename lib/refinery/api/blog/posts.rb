@@ -32,7 +32,7 @@ module Refinery
 
         private
           def posts_path(id = nil)
-            path = api_path + "/posts"
+            path = api_path + "/blog/posts"
             path << "/#{id}" if id
             path
           end

@@ -5,6 +5,17 @@ module Refinery
     RSpec.describe Pages do
       let(:client) { Pages.new }
 
+      describe "#create" do
+        it "creates a new page" do
+          VCR.use_cassette("pages/create") do
+            response = client.create(page: { page: { title: "The coolest page evar!" } })
+
+            expect(response.status).to eq(201)
+            expect(json(response)["title"]).to eq("The coolest page evar!")
+          end
+        end
+      end
+
       describe "#index" do
         it "fetches a list of pages" do
           VCR.use_cassette("pages/index") do
@@ -30,17 +41,6 @@ module Refinery
             expect(response.status).to eq(404)
             expect(json(response)["error"])
               .to(eq("The resource you were looking for could not be found."))
-          end
-        end
-      end
-
-      describe "#create" do
-        it "creates a new page" do
-          VCR.use_cassette("pages/create") do
-            response = client.create(page: { page: { title: "The coolest page evar!" } })
-
-            expect(response.status).to eq(201)
-            expect(json(response)["title"]).to eq("The coolest page evar!")
           end
         end
       end

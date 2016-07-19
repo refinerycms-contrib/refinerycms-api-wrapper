@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    refinerycms-api-wrapper (0.1.0)
+    refinerycms-api-wrapper (1.0.0.beta)
       faraday
 
 GEM

@@ -6,16 +6,16 @@ module Refinery
       let(:client) { Images.new }
 
       describe "#create" do
-        it "creates a image" do
-          pending
+        pending
 
-          # VCR.use_cassette("images/create") do
-          #   response = client.create(image: { image: { image: [upload_file('thinking-cat.jpg', 'image/jpg').inspect], image_title: "Kitty" } } )
+        # it "creates a image" do
+        #   VCR.use_cassette("images/create") do
+        #     response = client.create(image: { image: { image: [upload_file('thinking-cat.jpg', 'image/jpg').inspect], image_title: "Kitty" } } )
 
-          #   expect(response.status).to eq(201)
-          #   expect(JSON.parse(response.body)["image_title"]).to eq("Cat")
-          # end
-        end
+        #     expect(response.status).to eq(201)
+        #     expect(JSON.parse(response.body)["image_title"]).to eq("Cat")
+        #   end
+        # end
 
         # it "returns errors when payload is invalid" do
         #   VCR.use_cassette("products/create/invalid") do

@@ -59,7 +59,7 @@ module Refinery
       end
 
       describe "#destroy" do
-        it "updates attributes on a page" do
+        it "destroy a given page" do
           VCR.use_cassette("pages/destroy") do
             response = client.destroy(id: 2)
             expect(response.status).to eq(204)

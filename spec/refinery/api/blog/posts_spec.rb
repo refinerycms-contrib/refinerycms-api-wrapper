@@ -53,17 +53,6 @@ module Refinery
           end
         end
 
-        # describe "#create" do
-        #   it "creates a new post" do
-        #     VCR.use_cassette("blog/posts/create") do
-        #       response = client.create(post: { post: { title: "The coolest post evar!" } })
-
-        #       expect(response.status).to eq(201)
-        #       expect(json(response)["title"]).to eq("The coolest post evar!")
-        #     end
-        #   end
-        # end
-
         describe "#update" do
           it "updates attributes on a post" do
             VCR.use_cassette("blog/posts/update") do
@@ -78,7 +67,7 @@ module Refinery
         end
 
         describe "#destroy" do
-          it "updates attributes on a post" do
+          it "destroy a given post" do
             VCR.use_cassette("blog/posts/destroy") do
               response = client.destroy(id: 1)
               expect(response.status).to eq(204)

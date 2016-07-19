@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: REFINERYCMS_API_URLREFINERYCMS_API_PATH/inquiries/inquiries/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Refinery-Token:
+      - REFINERYCMS_API_TOKEN
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: 'No Content '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 73487d54-c223-483e-ace2-7a447a021432
+      X-Runtime:
+      - '0.165169'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.1/2015-02-26)
+      Date:
+      - Tue, 19 Jul 2016 17:03:20 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 19 Jul 2016 17:03:20 GMT
+recorded_with: VCR 3.0.1

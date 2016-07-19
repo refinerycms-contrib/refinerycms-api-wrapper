@@ -2,9 +2,20 @@ require "spec_helper"
 
 module Refinery
   module API
-    module Blog
-      RSpec.describe Posts do
-        let(:client) { Posts.new }
+    module Inquiries
+      RSpec.describe Inquiries do
+        let(:client) { Inquiries.new }
+
+        describe "#create" do
+          it "creates a new inquiry" do
+            VCR.use_cassette("inquiries/inquiries/create") do
+              response = client.create(inquiry: { inquiry: { name: "John Doe", email: "refinery@example.org", message: "Hello world!" } })
+
+              expect(response.status).to eq(201)
+              expect(json(response)["name"]).to eq("John Doe")
+            end
+          end
+        end
 
         describe "#index" do
           it "fetches a list of inquiries" do
@@ -19,9 +30,9 @@ module Refinery
         describe "#show" do
           it "fetches a single inquiry" do
             VCR.use_cassette("inquiries/inquiries/show") do
-              response = client.show(id: 1)
+              response = client.show(id: 6)
               expect(response.status).to eq(200)
-              expect(json(response)["name"]).to eq("test")
+              expect(json(response)["name"]).to eq("John Doe")
             end
           end
 
@@ -35,21 +46,10 @@ module Refinery
           end
         end
 
-        describe "#create" do
-          it "creates a new inquiry" do
-            VCR.use_cassette("inquiries/inquiries/create") do
-              response = client.create(inquiry: { inquiry: { name: "John Doe", email: "refinery@example.org", message: "Hello world!" } })
-
-              expect(response.status).to eq(201)
-              expect(json(response)["name"]).to eq("John Doe")
-            end
-          end
-        end
-
         describe "#destroy" do
-          it "updates attributes on a inquiry" do
+          it "destroy a given inquiry" do
             VCR.use_cassette("inquiries/inquiries/destroy") do
-              response = client.destroy(id: 2)
+              response = client.destroy(id: 6)
               expect(response.status).to eq(204)
             end
           end

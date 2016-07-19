@@ -14,9 +14,9 @@ module Refinery
           config.connection.get(inquiries_path(id))
         end
 
-        def create(post:)
+        def create(inquiry:)
           config.connection.post(inquiries_path) do |req|
-            req.body = post.to_json
+            req.body = inquiry.to_json
           end
         end
 
@@ -26,7 +26,7 @@ module Refinery
 
         private
           def inquiries_path(id = nil)
-            path = api_path + "/inquiries"
+            path = api_path + "/inquiries/inquiries"
             path << "/#{id}" if id
             path
           end

@@ -5,6 +5,8 @@ require 'pry'
 require 'dotenv'
 Dotenv.load
 
+require 'rack/test'
+
 require "support/request_helpers"
 require "support/fixture_helpers"
 

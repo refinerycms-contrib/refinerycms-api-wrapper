@@ -8,7 +8,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.4.0)
-    coderay (1.1.0)
+    coderay (1.1.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
@@ -18,28 +18,31 @@ GEM
     hashdiff (0.3.0)
     method_source (0.8.2)
     multipart-post (2.0.0)
-    pry (0.10.3)
+    pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    rack (2.0.1)
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rake (10.5.0)
-    rspec (3.4.0)
-      rspec-core (~> 3.4.0)
-      rspec-expectations (~> 3.4.0)
-      rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.2)
-      rspec-support (~> 3.4.0)
-    rspec-expectations (3.4.0)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.1)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.4.0)
-    rspec-mocks (3.4.1)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.4.0)
-    rspec-support (3.4.1)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
     safe_yaml (1.0.4)
     slop (3.6.0)
-    vcr (3.0.1)
-    webmock (1.22.6)
+    vcr (3.0.3)
+    webmock (2.1.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -51,6 +54,7 @@ DEPENDENCIES
   bundler (~> 1.11)
   dotenv
   pry
+  rack-test (~> 0.6.3)
   rake (~> 10.0)
   refinerycms-api-wrapper!
   rspec (~> 3.0)
@@ -58,4 +62,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.12.4
+   1.12.5

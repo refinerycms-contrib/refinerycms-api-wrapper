@@ -26,7 +26,7 @@ module Refinery
       end
 
       def destroy(id:)
-        config.connection.destroy(images_path(id))
+        config.connection.delete(images_path(id))
       end
 
       private

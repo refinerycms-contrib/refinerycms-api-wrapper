@@ -26,7 +26,7 @@ module Refinery
       end
 
       def destroy(id:)
-        config.connection.destroy(resources_path(id))
+        config.connection.delete(resources_path(id))
       end
 
       private

@@ -5,6 +5,10 @@ module Refinery
     RSpec.describe Resources do
       let(:client) { Resources.new }
 
+      describe "#create" do
+        pending
+      end
+
       describe "#index" do
         it "fetches a list of resources" do
           VCR.use_cassette("resources/index") do
@@ -13,10 +17,6 @@ module Refinery
             expect(JSON.parse(response.body)["resources"]).not_to be_empty
           end
         end
-      end
-
-      describe "#create" do
-        pending
       end
 
       describe "#show" do
@@ -44,7 +44,7 @@ module Refinery
       describe "#destroy" do
         it "destroy a given resource" do
           VCR.use_cassette("resources/destroy") do
-            response = client.destroy(id: 1)
+            response = client.destroy(id: 2)
             expect(response.status).to eq(204)
           end
         end

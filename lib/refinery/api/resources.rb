@@ -14,15 +14,11 @@ module Refinery
       end
 
       def create(resource:)
-        config.connection.post(resources_path) do |req|
-          req.body = resource.to_json
-        end
+        config.connection.post(resources_path, resource)
       end
 
       def update(id:, resource:)
-        config.connection.put(resources_path(id)) do |req|
-          req.body = resource.to_json
-        end
+        config.connection.put(resources_path(id), resource)
       end
 
       def destroy(id:)

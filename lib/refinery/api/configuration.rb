@@ -15,9 +15,9 @@ module Refinery
       def connection
         @_connection ||= ::Faraday.new(url: api_url,
           headers: { "X-Refinery-Token" => api_token }) do |faraday|
+            faraday.request :multipart
             faraday.request :json
             faraday.request :url_encoded
-            faraday.request :multipart
             faraday.adapter Faraday.default_adapter
         end
       end

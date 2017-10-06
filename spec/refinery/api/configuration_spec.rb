@@ -12,16 +12,16 @@ module Refinery
 
       it "sets values for token and url" do
         config.api_token = "1234"
-        config.api_url = "api.example.com"
+        config.api_url = "http://api.example.com"
 
         expect(config.api_token).to eq("1234")
-        expect(config.api_url).to eq("api.example.com")
+        expect(config.api_url).to eq("http://api.example.com")
       end
 
       describe "#connection" do
         before do
           config.api_token = "1234"
-          config.api_url = "api.example.com"
+          config.api_url = "http://api.example.com"
         end
 
         it "spawns a faraday connection instance" do

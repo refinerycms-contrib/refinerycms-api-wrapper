@@ -1,4 +1,5 @@
 require "faraday"
+require "faraday_middleware"
 
 module Refinery
   module API
@@ -13,10 +14,11 @@ module Refinery
 
       def connection
         @_connection ||= ::Faraday.new(url: api_url,
-          headers: { "X-Refinery-Token" => api_token,
-            "Content-Type" => "application/json" }) do |faraday|
-              faraday.request :url_encoded
-              faraday.adapter Faraday.default_adapter
+          headers: { "X-Refinery-Token" => api_token }) do |faraday|
+            faraday.request :multipart
+            faraday.request :json
+            faraday.request :url_encoded
+            faraday.adapter Faraday.default_adapter
         end
       end
     end

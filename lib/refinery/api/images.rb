@@ -14,15 +14,11 @@ module Refinery
       end
 
       def create(image:)
-        config.connection.post(images_path) do |req|
-          req.body = image.to_json
-        end
+        config.connection.post(images_path, image)
       end
 
       def update(id:, image:)
-        config.connection.put(images_path(id)) do |req|
-          req.body = image.to_json
-        end
+        config.connection.put(images_path(id), image)
       end
 
       def destroy(id:)
